@@ -10,5 +10,5 @@ Edit your details in src/app/app.component.ts. Styles are in src/styles.css.
 
 # Preview
 https://gautam-portfolio.gautamchauhan7879.workers.dev/
- (preview.gif)
+ 
 
