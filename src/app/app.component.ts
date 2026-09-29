@@ -23,7 +23,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   marquee = ['C#', 'ASP.NET Core', 'Web API', 'SQL Server', 'Entity Framework', 'LINQ', 'ADO.NET', 'Bootstrap', 'MVC', 'Stored Procedures'];
 
   stats = [
-    { value: '1.5+', label: 'Years experience' },
+    { value: '2', label: 'Years experience' },
     { value: '3', label: 'Govt. modules built' },
     { value: '8.5', label: 'MCA CGPA' },
     { value: 'REST', label: 'Secure Web APIs' }
