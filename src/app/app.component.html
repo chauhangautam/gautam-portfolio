@@ -1,0 +1,96 @@
+<div class="nav"><div class="wrap">
+  <a class="logo" href="#top"><i>GC</i>Gautam Chauhan</a>
+  <div class="links">
+    <a href="#work">Experience</a><a href="#project">Project</a><a href="#skills">Skills</a>
+    <a href="#education">Education</a><a href="#contact">Contact</a>
+    <button class="theme" type="button" aria-label="Toggle theme" (click)="toggleTheme()">◐</button>
+  </div>
+</div></div>
+
+<header class="hero" id="top">
+  <div class="blob" style="width:220px;height:220px;background:#7c3aed;top:-60px;left:-40px"></div>
+  <div class="blob" style="width:200px;height:200px;background:#ec4899;bottom:-70px;right:10%;animation-delay:2s"></div><div class="blob" style="width:160px;height:160px;background:#f59e0b;top:40%;right:-40px;animation-delay:4s;opacity:.35"></div>
+  <div class="grid">
+    <div>
+      <span class="pill"><b></b>Open to new opportunities</span>
+      <h1>Hi, I'm Gautam. I build <span>.NET apps </span> workflows.</h1>
+      <p>Results-driven .NET Software Engineer with 1.5+ years of professional experience delivering client-site enterprise applications for a
+government department. Hands-on expertise in ASP.NET Web Forms, ASP.NET Core MVC, ASP.NET Web API, C#, LINQ, ADO.NET, Entity
+Framework, SQL Server, and Bootstrap. Skilled in building CRUD-driven web modules, secure REST APIs, dynamic forms, and reporting
+features, with a track record of working directly with government client stakeholders to translate operational workflows into functional
+software.</p>
+      <div class="btns"><a class="btn p" href="#contact">Contact me</a><a class="btn" href="#work">View experience</a></div>
+    </div>
+    <div class="welcome">
+      <div class="av"><span>GC</span></div>
+      <small>Welcome 👋</small>
+      <h2>I am <em>Gautam</em></h2>
+      <div class="type">{{ typed }}</div>
+      <div class="chips"><span>C#</span><span>ASP.NET</span><span>Web API</span><span>SQL Server</span></div>
+    </div>
+  </div>
+</header>
+
+<main class="wrap">
+  <div class="marquee" aria-hidden="true"><div class="track">
+    @for (n of [1, 2]; track n) { @for (m of marquee; track m) { <span>{{ m }}</span> } }
+  </div></div>
+  <div class="stats">
+    @for (s of stats; track s.label) {
+      <div class="stat"><b>{{ s.value }}</b><div>{{ s.label }}</div></div>
+    }
+  </div>
+
+  <section id="work">
+    <h2>Experience</h2><p class="sub">Client-site work for the Department of Mining &amp; Geology.</p>
+    <div class="tl">
+      @for (j of jobs; track j.when) {
+        <div class="card"><span class="when">{{ j.when }}</span>
+          <h3>{{ j.title }}</h3><div class="co">{{ j.module }}</div>
+          <ul>@for (p of j.points; track p) { <li>{{ p }}</li> }</ul>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section id="project">
+    <h2>Featured project</h2><p class="sub">Vehicle / Ravanna Inspection &amp; Checking Web API</p>
+    <div class="g3">
+      @for (p of project; track p.title) {
+        <div class="card"><div class="ic">{{ p.icon }}</div><h3>{{ p.title }}</h3><div class="co">{{ p.text }}</div></div>
+      }
+    </div>
+    <div class="tags">@for (t of projectTags; track t) { <span>{{ t }}</span> }</div>
+  </section>
+
+  <section id="skills">
+    <h2>Skills</h2><p class="sub">Tools I use day to day.</p>
+    <div class="g3">
+      @for (g of skills; track g.title) {
+        <div class="card"><div class="ic">{{ g.icon }}</div><h3>{{ g.title }}</h3>
+          <div class="tags">@for (t of g.tags; track t) { <span>{{ t }}</span> }</div>
+        </div>
+      }
+    </div>
+  </section>
+
+  <section id="education">
+    <h2>Education</h2><p class="sub">&nbsp;</p>
+    <div class="edu">
+      @for (e of education; track e.level) {
+        <div class="card"><b>{{ e.level }}</b><small>{{ e.school }}</small><small>{{ e.years }}</small></div>
+      }
+    </div>
+  </section>
+
+  <div class="cta" id="contact">
+    <h2>Let's work together</h2>
+    <p>Client-focused communication, problem-solving under deadlines, and a habit of shipping.</p>
+    <div class="btns" style="justify-content:center">
+      <a class="btn" [href]="'mailto:' + email">{{ email }}</a>
+      <a class="btn o" [href]="'tel:' + phone.replace(' ', '')">{{ phone }}</a>
+      <a class="btn o" [href]="linkedin">LinkedIn</a>
+    </div>
+  </div>
+  <footer>Saharanpur, Uttar Pradesh, India</footer>
+</main>
